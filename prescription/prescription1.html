@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+@font-face {
+    font-family: 'PlusJakartaSans-Bold';
+    src: url('https://res.cloudinary.com/myrltech/raw/upload/v1685442477/PlusJakartaSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+      .top_provider_section {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5px;
+      }
+
+      .top_provider_section_two {
+        padding-left: 20px;
+        padding-right: 10px;
+      }
+
+      body {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-family: "PlusJakartaSans-Bold";
+      }
+
+      /* HEADING SECTION */
+      /* .heading_section {
+        border: 1px solid black;
+        border-bottom: 0px;
+        text-align: center;
+      }
+
+      .heading_section .heading_two {
+        padding: 10px;
+        border-top: 1px solid black;
+      }
+
+      .heading_section .heading_one {
+        padding: 10px;
+      } */
+
+      /* MEDICINE SECTION */
+
+      .shedule_medicine_wrapper {
+        border: 1px solid black;
+        border-left: 0px;
+        border-right: 0px;
+        border-bottom: none;
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* gap: 20px; */
+        grid-auto-rows: minmax(20px, auto);
+        padding: 10px;
+      }
+
+      .right_tick_div {
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        width: 5rem;
+      }
+
+      /* TOP SECTION */
+
+      .top_setion_wrapper {
+        border: 1px solid black;
+        border-bottom: 0px;
+        display: grid;
+        grid-template-columns: repeat(2, 3fr);
+        /* gap: 20px; */
+        grid-auto-rows: minmax(30px, auto);
+      }
+
+      .top_setion_wrapper .top_setion_wrapper_one {
+        border-right: 1px solid black;
+        padding: 10px;
+        border-bottom: 1px solid black;
+      }
+      .top_setion_wrapper .top_setion_wrapper_two {
+        border-bottom: 1px solid black;
+        padding: 10px;
+      }
+
+      /* COMPLAINT SETCION */
+
+      .complaints_section {
+        border: 1px solid black;
+        border-top: 0px;
+        border-bottom: 0px;
+        display: flex;
+        /* height: 200px; */
+        /* grid-auto-rows: minmax(30px, auto);
+        grid-template-columns: repeat(2, 3fr);
+        display: grid; */
+      }
+
+      .complaints_section_one {
+        padding: 10px;
+        width: 40%;
+      }
+      .complaints_section_two {
+        width: 100%;
+      }
+
+      .complaints_subsection {
+        /* border: 1px solid black; */
+        min-height: 100px;
+        grid-auto-rows: minmax(30px, auto);
+        grid-template-columns: repeat(3, 3fr);
+        display: grid;
+      }
+
+      /* DIAGNOSIS SETCION */
+      .diagnosis_section {
+        border: 1px solid black;
+        border-top: 0px;
+        padding: 10px;
+        /* height: 50px; */
+      }
+
+      .treatment_advise_section {
+        border: 1px solid black;
+        border-top: 0px;
+        padding: 10px;
+      }
+
+      .investigation_section .investigation_section_heading {
+        border: 1px solid black;
+        border-top: 0px;
+        padding: 10px;
+      }
+      .investigation_section .investigation_section_content {
+        border: 1px solid black;
+        border-top: 0px;
+        /* padding: 10px; */
+        /* height: 50px; */
+      }
+
+      /* NEXT CONSULATION SECTION */
+
+      .next_consultation_section_heading {
+        border: 1px solid black;
+        border-top: 0px;
+        padding: 10px;
+      }
+
+      .next_consultation_section {
+        min-height: 200px;
+        /* grid-auto-rows: minmax(30px, auto);
+        grid-template-columns: repeat(2, 3fr); */
+        /* display: flex; */
+        border: 1px solid black;
+        border-top: 0px;
+        width: 100%;
+      }
+
+      /* .next_consultation_section .next_consultation_section_one {
+        width: 60%;
+      } */
+      /* .next_consultation_section .next_consultation_section_two {
+        width: 40%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border-left: 1px solid black;
+        flex-flow: column;
+      } */
+
+      /* SIGNITURE SECTION */
+
+      .signiture_section {
+        text-align: center;
+        margin-left: 900px;
+        margin-bottom: 20px;
+        /* float: right;     */
+      }
+      .signiture_image {
+        /* width: 200px; */
+      }
+      .signiture_section .signiture_image_section {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+      }
+
+      .medicine_table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- TOP HEADING SECTION -->
+    <div class="top_provider_section">
+      <div class="top_provider_section_one">
+        <img
+          src="https://res.cloudinary.com/myrltech/image/upload/v1685082130/CSSubhartilogo.png"
+          alt="Girl in a jacket"
+          width="100"
+          height="100"
+        />
+      </div>
+      <div class="top_provider_section_two">
+        <h3>
+          Chhatrapati Shivaji Subharti Hospital <br />
+          Subharti Puram, NH-58, Delhi Haridwar Bypass Road, Meerut-250005
+          <br />
+          contact@hospital.subharti.org
+        </h3>
+      </div>
+      <div class="top_provider_section_three">
+        <img
+          src="https://res.cloudinary.com/myrltech/image/upload/v1685082132/qr-code.jpg"
+          alt="Girl in a jacket"
+          width="100"
+          height="100"
+        />
+      </div>
+    </div>
+
+    <div class="heading_section">
+      <!-- <div class="heading_one">OUT PATIENT CARD</div> -->
+      <!-- <div class="heading_two">DIEBETIC CLINIC</div> -->
+    </div>
+
+    <!-- SETCION TWO -->
+
+    <div class="top_setion_wrapper">
+      <div class="top_setion_wrapper_one">
+        <bold>Patient Name :</bold>
+      </div>
+      <div class="top_setion_wrapper_two"><bold>Doctor name :</bold></div>
+      <div class="top_setion_wrapper_one">
+        <bold>Age/Gender :</bold>
+      </div>
+      <!-- <div class="top_setion_wrapper_two">
+        <bold>DEPARTMENT NAME : </bold>
+      </div>
+      <div class="top_setion_wrapper_one">
+        <bold>FATHER NAME :</bold>
+      </div> -->
+      <div class="top_setion_wrapper_two">
+        <bold>Registration date/time : </bold>
+      </div>
+      <div class="top_setion_wrapper_one">
+        <bold>Mobile No :</bold>
+      </div>
+      <div class="top_setion_wrapper_two"><bold>Cssh No : </bold></div>
+      <div class="top_setion_wrapper_one">
+        <bold>Address: </bold>
+      </div>
+      <div class="top_setion_wrapper_two">Email :</div>
+    </div>
+
+    <!-- Chief Complaints:  -->
+
+    <div class="diagnosis_section">
+      <bold>Relevent History :</bold><br />
+      <bold>Allergies :</bold><br />
+      <bold>Comorbidities :</bold><br />
+    </div>
+
+    <!-- General | Systemic Examination: -->
+
+    <div style="border-bottom: 0px" class="diagnosis_section">
+      <bold>General | Systematic Examination : </bold>
+    </div>
+
+    <!-- DIAGNOSIS -->
+
+    <div class="top_setion_wrapper">
+      <!-- <bold>Diagnosis : </bold> -->
+      <div class="top_setion_wrapper_one">
+        <bold>Diagnosis : </bold>
+      </div>
+      <div class="top_setion_wrapper_two">Symptom :</div>
+    </div>
+
+    <!-- SYMPTOMS -->
+
+    <!-- <div class="diagnosis_section">
+      <bold>Symptoms : </bold>
+    </div> -->
+
+    <!-- TREATMENT ADVISE -->
+
+    <div class="treatment_advise_section">
+      <strong>Treatment And Follow-up Advise : </strong>
+    </div>
+
+    <!-- COMPLAINTS SECTION -->
+
+    <div class="complaints_section">
+      <!-- <div class="complaints_section_one">COMPLAINTS :</div> -->
+      <div class="complaints_section_two">
+        <div class="complaints_subsection">
+          <!-- <div class="complaints_subsection_one">
+            <table
+              style="
+                height: 100%;
+                width: 100%;
+                text-align: center;
+                border-top: 0px;
+              "
+            >
+              <tr>
+                <th>RBS</th>
+              </tr>
+              <tr>
+                <td>1</td>
+              </tr>
+            </table>
+          </div> -->
+          <div class="complaints_subsection_two">
+            <table style="width: 100%; height: 100%; text-align: center">
+              <tr>
+                <th style="width: 50%">BP</th>
+                <td>20</td>
+              </tr>
+              <tr>
+                <th style="width: 50%" rowspan="2">PULSE</th>
+              </tr>
+              <tr>
+                <td>30</td>
+              </tr>
+              <tr>
+                <th style="width: 50%" rowspan="2">TEMPERATURE</th>
+              </tr>
+              <tr>
+                <td>10</td>
+              </tr>
+            </table>
+          </div>
+          <div class="complaints_subsection_three">
+            <table style="width: 100%; height: 100%; text-align: center">
+              <tr>
+                <th style="width: 50%">HEIGHT</th>
+                <td>30</td>
+              </tr>
+              <tr>
+                <th style="width: 50%" rowspan="2">WEIGHT</th>
+              </tr>
+              <tr>
+                <td>20</td>
+              </tr>
+              <tr>
+                <th style="width: 50%" rowspan="2">BMI</th>
+              </tr>
+              <tr>
+                <td>20</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="complaints_subsection_one">
+            <table style="width: 100%; height: 100%; text-align: center">
+              <tr>
+                <th style="width: 50%">Random Blood Sugar (RBS)</th>
+                <td>20</td>
+              </tr>
+              <tr>
+                <th style="width: 50%" rowspan="2">Others</th>
+              </tr>
+              <tr>
+                <td>30</td>
+              </tr>
+              <!-- <tr>
+                <th style="width: 50%;" rowspan="2">TEMPERATURE</th>
+              </tr>
+              <tr>
+                <td>10</td>
+              </tr> -->
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEDICINE  SECTION -->
+    <div class="medicine_section">
+      <table class="medicine_table" style="width: 100%; text-align: center">
+        <tr>
+          <th>Sr No</th>
+          <th colspan="2">NAME OF MEDICINE</th>
+          <th>DOSE</th>
+          <th>QTY</th>
+
+          <th colspan="3">
+            <div style="margin-top: 10px">SCHEDULED MEDICINE</div>
+
+            <div class="shedule_medicine_wrapper">
+              <div class="one">MORNING</div>
+              <div class="two">AFTERNOON</div>
+              <div class="three">NIGHT</div>
+              <!-- <div class="four">Four</div>
+              <div class="five">Five</div>
+              <div class="six">Six</div>
+              <div class="seven">text</div> -->
+            </div>
+          </th>
+          <th>Start Date / Duration</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>tablet</td>
+          <td style="text-align: left">
+            BANDRONE (50 MG) Ibandronate Prescribed by Dr. Subharti Test <br />
+            Note: -
+          </td>
+          <td>50 mg</td>
+          <td>1</td>
+          <td>
+            <div class="right_tick_div">
+              <img
+                src="https://res.cloudinary.com/myrltech/image/upload/v1685103497/download.png"
+                alt="Girl in a jacket"
+                width="25px"
+                height="25px"
+              />
+              (BBF),(BBF)
+            </div>
+          </td>
+          <td>
+            <div class="right_tick_div">
+              <img
+                src="https://res.cloudinary.com/myrltech/image/upload/v1685103497/download.png"
+                alt="Girl in a jacket"
+                width="25px"
+                height="25px"
+              />
+              (AL),(AL)
+            </div>
+          </td>
+          <td>
+            <div class="right_tick_div">
+              <img
+                src="https://res.cloudinary.com/myrltech/image/upload/v1685103497/download.png"
+                alt="Girl in a jacket"
+                width="25px"
+                height="25px"
+              />
+              (BD),(BD)
+            </div>
+          </td>
+          <td style="text-align: left">
+            [Everyday/Aternate] from [start date] for [no. of days] day(s)
+          </td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>tablet</td>
+          <td style="text-align: left">
+            BANDRONE (50 MG) Ibandronate Prescribed by Dr. Subharti Test <br />
+            Note: -
+          </td>
+          <td>1 mg</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td style="text-align: left">
+            [Everyday/Aternate] from [start date] for [no. of days] day(s)
+          </td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>tablet</td>
+          <td style="text-align: left">
+            BANDRONE (50 MG) Ibandronate Prescribed by Dr. Subharti Test <br />
+            Note: -
+          </td>
+          <td>30 ml</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td style="text-align: left">
+            [Everyday/Aternate] from [start date] for [no. of days] day(s)
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- INVESTIGATION SECTION -->
+    <!-- style="page-break-before: always" -->
+    <div class="investigation_section">
+      <div class="investigation_section_heading">
+        <bold> INVESTIGATION : </bold>
+      </div>
+      <div class="investigation_section_content">
+        <table class="table" style="width: 100%; text-align: center">
+          <tr>
+            <th>SNO</th>
+            <th>DESCRIPTION</th>
+            <th>TEST DATE</th>
+            <th>PURPOSE</th>
+          </tr>
+          <tr>
+            <td>1.</td>
+            <td style="text-align: left">
+              CT SCAN-CECT HEAD(Radiology) 03 May '23 test 2 Prescribed by Dr.
+              Subharti Test
+              <br />
+              Note:-
+            </td>
+            <td>03 May '23</td>
+            <td>test 2</td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td style="text-align: left">
+              Blood test(Medical Test) 02 May '23 test 2 Prescribed by Dr.
+              Subharti Test
+              <br />
+              Note:-
+            </td>
+            <td>03 May '23</td>
+            <td>test 2</td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td style="text-align: left">
+              Blood test(Medical Test) 12 Apr '23 test 2 Prescribed by Dr.
+              Subharti Test
+              <br />
+              Note:-
+            </td>
+            <td>03 May '23</td>
+            <td>test 2</td>
+          </tr>
+          <tr>
+            <td>4.</td>
+            <td style="text-align: left">
+              Blood test(Medical Test) 12 Apr '23 test 2 Prescribed by Dr.
+              Subharti Test
+              <br />
+              Note:-
+            </td>
+            <td>03 May '23</td>
+            <td>test 2</td>
+          </tr>
+          <tr>
+            <td>5.</td>
+            <td style="text-align: left">
+              Blood test(Medical Test) 12 Apr '23 test 2 Prescribed by Dr.
+              Subharti Test
+              <br />
+              Note:-
+            </td>
+            <td>03 May '23</td>
+            <td>test 2</td>
+          </tr>
+          <tr>
+            <td>6.</td>
+            <td style="text-align: left">
+              Blood test(Medical Test) 12 Apr '23 test 2 Prescribed by Dr.
+              Subharti Test
+              <br />
+              Note:-
+            </td>
+            <td>03 May '23</td>
+            <td>test 2</td>
+          </tr>
+          <tr>
+            <td>7.</td>
+            <td style="text-align: left">
+              Blood test(Medical Test) 12 Apr '23 test 2 Prescribed by Dr.
+              Subharti Test
+              <br />
+              Note:-
+            </td>
+            <td>03 May '23</td>
+            <td>test 2</td>
+          </tr>
+          <tr>
+            <td>8.</td>
+            <td style="text-align: left">
+              Blood test(Medical Test) 12 Apr '23 test 2 Prescribed by Dr.
+              Subharti Test
+              <br />
+              Note:-
+            </td>
+            <td>03 May '23</td>
+            <td>test 2</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- NEXT CONSULATION SECTION -->
+
+    <div class="next_consultation_section_heading">
+      <bold> NEXT CONSULATION : </bold>
+    </div>
+    <div class="next_consultation_section">
+      <div class="next_consultation_section_one">
+        <table class="table" style="width: 100%; text-align: center">
+          <tr>
+            <th>SNO</th>
+            <th>DESCRIPTION</th>
+            <th>APPOINTMENT DATE</th>
+            <th>PURPOSE</th>
+          </tr>
+          <tr>
+            <td>1.</td>
+            <td style="text-align: left">
+              CT SCAN-CECT HEAD(Radiology) 03 May '23 test 2 Prescribed by Dr.
+              Subharti Test
+              <br />
+              Note:-
+            </td>
+            <td>03 May '23</td>
+            <td>test 2</td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td style="text-align: left">
+              Blood test(Medical Test) 02 May '23 test 2 Prescribed by Dr.
+              Subharti Test
+              <br />
+              Note:-
+            </td>
+            <td>03 May '23</td>
+            <td>test 2</td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td style="text-align: left">
+              Blood test(Medical Test) 12 Apr '23 test 2 Prescribed by Dr.
+              Subharti Test
+              <br />
+              Note:-
+            </td>
+            <td>03 May '23</td>
+            <td>test 2</td>
+          </tr>
+          <tr>
+            <td>4.</td>
+            <td style="text-align: left">
+              Blood test(Medical Test) 12 Apr '23 test 2 Prescribed by Dr.
+              Subharti Test
+              <br />
+              Note:-
+            </td>
+            <td>03 May '23</td>
+            <td>test 2</td>
+          </tr>
+          <tr>
+            <td>5.</td>
+            <td style="text-align: left">
+              Blood test(Medical Test) 12 Apr '23 test 2 Prescribed by Dr.
+              Subharti Test
+              <br />
+              Note:-
+            </td>
+            <td>03 May '23</td>
+            <td>test 2</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- SIGNITURE SECTION -->
+
+    <div style="margin-top: 30px">
+      <h2>Lifestyle Advise</h2>
+    </div>
+
+    <div class="signiture_section">
+      <div class="signiture_image_section">
+        <img
+          class="signiture_image"
+          src="https://res.cloudinary.com/myrltech/image/upload/v1685082140/Screenshot_2023-05-26_at_11.43.37_AM_2.png"
+          alt="Girl in a jacket"
+        />
+        <b style="margin: 10px">5th May 2023, 2:56 pm</b>
+      </div>
+      <div>SIGNATURE & STAMP</div>
+      <div>Reg.No. 12345, Maharashtra</div>
+    </div>
+
+    <div >
+      <b>Note: This prescription is generated on the AdhereLive platform</b>
+    </div>
+  </body>
+</html>
